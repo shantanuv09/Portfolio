@@ -56,7 +56,7 @@ const TerminalText = ({
               options: {
                 strings: Array.isArray(text) ? text : [text],
                 autoStart: true,
-                loop: false,
+                loop: true,
                 delay: typeSpeed,
                 deleteSpeed: 0,
                 cursor: showCursor ? '|' : '',
