@@ -33,7 +33,7 @@ const HomePage = () => {
 
             <div className="justify-center flex flex-wrap gap-4">
               <a
-                href="mailto:someone@example.com"
+                href="mailto:shantanuvartak09@gmail.com"
                 className="font-mono text-sm uppercase tracking-wider hover:text-cyber-blue transition-colors duration-300"
               >
                 <Mail className="ml-2 h-5 w-5" />
