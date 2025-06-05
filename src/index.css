@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-black min-h-screen text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono font-bold leading-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 md:px-8 max-w-7xl;
+  }
+
+  .cyber-button {
+    @apply font-mono inline-flex items-center px-6 py-3 border-2 border-cyber-blue bg-transparent 
+    text-cyber-blue hover:bg-cyber-blue hover:bg-opacity-10 transition-all duration-300
+    focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:ring-opacity-50;
+  }
+
+  .cyber-card {
+    @apply bg-cyber-dark bg-opacity-80 border border-cyber-gray p-6 backdrop-blur-sm;
+  }
+  
+  .cyber-section {
+    @apply py-16 md:py-24;
+  }
+
+  .cyber-input {
+    @apply w-full bg-cyber-dark border-2 border-cyber-gray text-white px-4 py-3 font-mono
+    focus:outline-none focus:border-cyber-blue transition-all duration-300;
+  }
+
+  .cyber-terminal {
+    @apply bg-cyber-dark border-2 border-cyber-gray p-6 font-mono text-white;
+  }
+
+  .terminal-prompt::before {
+    @apply content-['$_'] text-cyber-green;
+  }
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cyber-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cyber-light hover:bg-cyber-blue transition-colors duration-300;
+}
