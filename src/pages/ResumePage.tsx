@@ -41,9 +41,9 @@ const ResumePage = () => {
           <div className="flex justify-between items-center mb-8">
             <p className="font-mono text-sm text-cyber-light">Last updated: June 2025</p>
             <a 
-              href="#" 
+              href="/Resume.pdf"
               className="cyber-button"
-              download="CyberDefender_Resume_2024.pdf"
+              download="ShantanuVartak_Resume.pdf"
             >
               <FileDown className="h-4 w-4 mr-2" />
               Download PDF
