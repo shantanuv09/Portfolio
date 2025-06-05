@@ -9,7 +9,7 @@ const ContactPage = () => {
         <div className="max-w-4xl mx-auto">
           <div className="cyber-terminal mb-8">
             <TerminalText 
-              text="$ ssh contact@cyberdefender.com"
+              text="$ ssh shantanuvartak09@gmail.com"
               className="text-sm text-cyber-green mb-2"
               manual
             />
