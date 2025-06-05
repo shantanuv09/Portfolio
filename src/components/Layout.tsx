@@ -18,7 +18,7 @@ const Layout = () => {
   }, [location]);
 
   return (
-    <div className="flex flex-col min-h-screen relative overflow-hidden">
+    <div className="flex flex-col min-h-screen relative">
       <ParticleBackground />
       <Header currentPage={pageTitle} />
       <main className="flex-grow relative z-10">
