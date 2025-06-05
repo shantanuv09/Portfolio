@@ -1,12 +1,8 @@
 import { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Shield, ChevronDown } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
-interface HeaderProps {
-  currentPage: string;
-}
-
-const Header = ({ currentPage }: HeaderProps) => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -42,13 +38,7 @@ const Header = ({ currentPage }: HeaderProps) => {
     >
       <div className="container-custom py-4">
         <div className="flex items-center justify-between">
-          <Link 
-            to="/" 
-            className="flex items-center space-x-2 text-cyber-blue hover:text-cyber-green transition-colors duration-300"
-          >
-            <Shield className="h-8 w-8" />
-            <span className="font-mono font-bold text-xl hidden sm:block">CYBERDEFENDER</span>
-          </Link>
+          
           
           <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
@@ -105,19 +95,7 @@ const Header = ({ currentPage }: HeaderProps) => {
       </div>
       
       {/* Page title bar */}
-      <div className="bg-cyber-dark border-y border-cyber-gray">
-        <div className="container-custom py-2 flex items-center justify-between">
-          <div className="flex items-center space-x-2 font-mono text-sm">
-            <span className="text-cyber-green">~/</span>
-            <span>{currentPage.toLowerCase()}</span>
-            <span className="animate-blink">_</span>
-          </div>
-          <div className="hidden sm:flex items-center space-x-1 text-xs text-cyber-light">
-            <span>v1.0.0</span>
-            <ChevronDown className="h-4 w-4" />
-          </div>
-        </div>
-      </div>
+      
     </header>
   );
 };

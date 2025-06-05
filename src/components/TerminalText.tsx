@@ -8,44 +8,63 @@ interface TerminalTextProps {
   startDelay?: number;
   showCursor?: boolean;
   tag?: keyof JSX.IntrinsicElements;
+  manual?: boolean; // <== NEW PROP
 }
 
 const TerminalText = ({
   text,
   className = '',
-  typeSpeed = 50,
-  startDelay = 0,
+  typeSpeed = 30,
   showCursor = true,
-  tag: Tag = 'div'
+  tag: Tag = 'div',
+  manual = false, // default: false
 }: TerminalTextProps) => {
   const [isClient, setIsClient] = useState(false);
-  
+
   useEffect(() => {
     setIsClient(true);
   }, []);
-  
-  // Default styles for terminal text
+
   const terminalClasses = `font-mono ${className}`;
-  
+
   if (!isClient) {
-    // Server-side or initial render
     return <Tag className={terminalClasses}>{Array.isArray(text) ? text[0] : text}</Tag>;
   }
-  
+
   return (
     <Tag className={terminalClasses}>
       <Typewriter
-        options={{
-          strings: Array.isArray(text) ? text : [text],
-          autoStart: true,
-          loop: Array.isArray(text) && text.length > 1,
-          delay: typeSpeed,
-          deleteSpeed: typeSpeed,
-          cursor: showCursor ? '|' : '',
-          pauseFor: 2000,
-          wrapperClassName: 'terminal-text-wrapper',
-          cursorClassName: 'text-cyber-blue animate-blink',
-        }}
+        {...(manual
+          ? {
+              onInit: (typewriter) => {
+                typewriter.changeDelay(typeSpeed);
+
+                if (Array.isArray(text)) {
+                  text.forEach((line, index) => {
+                    typewriter.typeString(line);
+                    if (index < text.length - 1) {
+                      typewriter.pauseFor(1000).typeString('\n');
+                    }
+                  });
+                } else {
+                  typewriter.typeString(text);
+                }
+                typewriter.start();
+              },
+            }
+          : {
+              options: {
+                strings: Array.isArray(text) ? text : [text],
+                autoStart: true,
+                loop: false,
+                delay: typeSpeed,
+                deleteSpeed: 0,
+                cursor: showCursor ? '|' : '',
+                pauseFor: 2000,
+                wrapperClassName: 'terminal-text-wrapper',
+                cursorClassName: 'text-cyber-blue animate-blink',
+              },
+            })}
       />
     </Tag>
   );

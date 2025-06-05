@@ -5,28 +5,22 @@ import TimelineItem from '../components/TimelineItem';
 const ExperiencePage = () => {
   const experiences = [
     {
-      title: "Senior Security Researcher",
-      subtitle: "BlockSecure Technologies",
-      dateRange: "2023 - Present",
-      description: "Lead security audits for blockchain protocols and smart contracts, identifying critical vulnerabilities that could lead to financial losses. Developed an automated smart contract scanner that reduced audit time by 40%. Presented findings at three major blockchain security conferences."
+      title: "Security Analayst Intern",
+      subtitle: "Suma Soft Pvt. Ltd.",
+      dateRange: "Jun'23 - Dec'23",
+      description: "Conducted thorough Vulnerability Assessment and Penetration Testing (VAPT) on client systems, identifying critical security vulnerabilities and providing actionable mitigations to enhance system security and reduce potential threats via detailed reports."
     },
     {
-      title: "Penetration Tester",
-      subtitle: "CyberDefense Corp",
-      dateRange: "2021 - 2023",
-      description: "Conducted comprehensive penetration tests against web applications, APIs, and network infrastructure for Fortune 500 clients. Discovered and documented critical vulnerabilities that could have resulted in data breaches. Worked with development teams to implement security best practices."
+      title: "Android Application Development Intern",
+      subtitle: "Invasystems INC.",
+      dateRange: "Jun'22 - Jul'22",
+      description: "Developed Full-stack in-house ticketing system using Java to streamline issue reporting and resolution for employees and admins. Integrated Role-Based Access Control to maintain a secure environment."
     },
     {
-      title: "Security Analyst",
-      subtitle: "SecureNet Solutions",
-      dateRange: "2020 - 2021",
-      description: "Monitored and analyzed security events across client networks. Implemented SIEM solutions and created custom detection rules. Participated in incident response activities and performed root cause analysis for security incidents."
-    },
-    {
-      title: "Cybersecurity Intern",
-      subtitle: "TechGuard Systems",
-      dateRange: "Summer 2019",
-      description: "Assisted in vulnerability assessments and security audits. Developed scripts to automate security testing processes. Contributed to the company's security knowledge base and documentation."
+      title: "Cyber Security Intern",
+      subtitle: "Ernst & Young",
+      dateRange: "Aug'21 - Sept'21",
+      description: "Provided custom and tailored security consultation for clients across various sectors by suggesting security best practices listed among ISO 27001, NIST SP 800-53 and NIST CSF."
     }
   ];
   
@@ -38,12 +32,14 @@ const ExperiencePage = () => {
             <TerminalText 
               text="$ cat ./career/experience.log"
               className="text-sm text-cyber-green mb-2"
+              manual
             />
             <h1 className="text-4xl font-bold mb-4">Professional Experience</h1>
             <TerminalText 
               text="Building a career in digital defense and security innovation."
               className="text-xl text-white"
               typeSpeed={30}
+              manual
             />
           </div>
           
@@ -79,7 +75,7 @@ const ExperiencePage = () => {
               <li className="flex items-start">
                 <span className="text-cyber-blue font-mono mr-2">→</span>
                 <p className="text-gray-300">
-                  <span className="text-white">Discovered a critical vulnerability</span> in a popular DeFi protocol that could have resulted in a $10M loss of user funds. Received a bounty award and recognition from the project team.
+                  <span className="text-white">Discovered a critical vulnerabilities</span> in a popular web assets that could have resulted in a huge losses to the organization. Received a bounty award and recognition from the project team.
                 </p>
               </li>
               <li className="flex items-start">
@@ -94,17 +90,11 @@ const ExperiencePage = () => {
                   <span className="text-white">Led a security training program</span> that educated over 500 developers on secure coding practices and resulted in a 45% reduction in security issues found during code reviews.
                 </p>
               </li>
-              <li className="flex items-start">
-                <span className="text-cyber-blue font-mono mr-2">→</span>
-                <p className="text-gray-300">
-                  <span className="text-white">Published research on novel attack vectors</span> in smart contract architectures at a major security conference, contributing to the improvement of industry security standards.
-                </p>
-              </li>
             </ul>
           </div>
           
           {/* Testimonials */}
-          <div>
+          {/* <div>
             <h2 className="text-2xl font-bold mb-6">What Colleagues Say</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -128,7 +118,7 @@ const ExperiencePage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

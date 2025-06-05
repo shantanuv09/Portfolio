@@ -12,7 +12,6 @@ const SkillsPage = () => {
       skills: [
         { name: "Web Application Pentesting", level: 5 },
         { name: "Network Vulnerability Assessment", level: 4 },
-        { name: "Mobile Application Security", level: 4 },
         { name: "API Security Testing", level: 5 },
         { name: "Social Engineering", level: 3 }
       ]
@@ -25,7 +24,7 @@ const SkillsPage = () => {
         { name: "Python", level: 5 },
         { name: "JavaScript/TypeScript", level: 4 },
         { name: "Solidity", level: 4 },
-        { name: "Bash Scripting", level: 5 },
+        { name: "Java", level: 5 },
         { name: "C/C++", level: 3 }
       ]
     },
@@ -39,30 +38,6 @@ const SkillsPage = () => {
         { name: "CI/CD Security", level: 4 },
         { name: "Infrastructure as Code", level: 3 },
         { name: "Cloud Architecture", level: 3 }
-      ]
-    },
-    {
-      name: "Blockchain & Cryptography",
-      icon: <Database className="h-6 w-6 text-cyber-yellow" />,
-      color: "cyber-yellow",
-      skills: [
-        { name: "Smart Contract Security", level: 5 },
-        { name: "DeFi Protocol Analysis", level: 4 },
-        { name: "Cryptographic Implementations", level: 4 },
-        { name: "Blockchain Architecture", level: 3 },
-        { name: "Zero-Knowledge Proofs", level: 4 }
-      ]
-    },
-    {
-      name: "Tools & Technologies",
-      icon: <Monitor className="h-6 w-6 text-cyber-red" />,
-      color: "cyber-red",
-      skills: [
-        { name: "Burp Suite", level: 5 },
-        { name: "Metasploit", level: 4 },
-        { name: "Wireshark", level: 5 },
-        { name: "SIEM Systems", level: 3 },
-        { name: "IDS/IPS", level: 4 }
       ]
     },
     {
@@ -86,12 +61,14 @@ const SkillsPage = () => {
           <TerminalText 
             text="$ skills --list-all --format=detailed"
             className="text-sm text-cyber-green mb-2"
+            manual
           />
           <h1 className="text-4xl font-bold mb-4">Technical Skills</h1>
           <TerminalText 
             text="Comprehensive toolkit for modern cybersecurity challenges."
             className="text-xl text-white"
             typeSpeed={30}
+            manual
           />
         </div>
         
@@ -124,9 +101,9 @@ const SkillsPage = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {[
               "Burp Suite", "Metasploit", "Wireshark", "Nmap", "Ghidra", 
-              "IDA Pro", "OWASP ZAP", "Kali Linux", "Docker", "Kubernetes",
-              "AWS", "Azure", "Git", "Mythril", "Slither", 
-              "Truffle", "Hardhat", "EthersJS", "Remix IDE", "Foundry"
+              "IDA Pro", "OWASP ZAP", "Kali Linux", "Docker", "Java",
+              "AWS", "Azure", "Git", "Python", "Solidity", 
+              "Ganache", "IntelliJ IDEA", "Pycharm", "Remix IDE", "VS Code"
             ].map((tool, index) => (
               <div 
                 key={index} 
@@ -146,7 +123,7 @@ const SkillsPage = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <span className="text-cyber-blue font-mono">→</span>
-                <p className="text-white">OWASP Testing Methodology</p>
+                <p className="text-white">OWASP Top 10</p>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-cyber-blue font-mono">→</span>
@@ -158,14 +135,14 @@ const SkillsPage = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-cyber-blue font-mono">→</span>
-                <p className="text-white">ISO 27001/27002</p>
+                <p className="text-white">ISO 27001</p>
               </div>
             </div>
             
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <span className="text-cyber-green font-mono">→</span>
-                <p className="text-white">SANS Critical Security Controls</p>
+                <p className="text-white">Cyber Kill Chain</p>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-cyber-green font-mono">→</span>

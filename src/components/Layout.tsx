@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from './Header';
-import Footer from './Footer';
 import ParticleBackground from './ParticleBackground';
 
 const Layout = () => {
@@ -25,7 +24,6 @@ const Layout = () => {
       <main className="flex-grow relative z-10">
         <Outlet />
       </main>
-      <Footer />
     </div>
   );
 };

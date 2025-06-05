@@ -1,20 +1,27 @@
-import { Calendar, GraduationCap, Award, BookOpen } from 'lucide-react';
+import { GraduationCap, BookOpen } from 'lucide-react';
 import TerminalText from '../components/TerminalText';
 import TimelineItem from '../components/TimelineItem';
+import Me from '../images/Me.jpg'
 
 const AboutPage = () => {
   const educationItems = [
     {
-      title: 'Master of Science in Cybersecurity',
-      subtitle: 'Georgia Institute of Technology',
-      dateRange: '2022 - 2024',
-      description: 'Specialized in advanced threat detection, cryptography, and blockchain security with a focus on smart contract vulnerabilities and decentralized systems.'
+      title: 'Master of Science in Cybersecurity Engineering',
+      subtitle: 'University of Washington',
+      dateRange: '2025 - Present',
+      description: 'Specialized in penetration testing, advanced threat detection and static/dynamic malware analysis.'
     },
     {
-      title: 'Bachelor of Science in Computer Science',
-      subtitle: 'University of California, San Diego',
-      dateRange: '2018 - 2022',
-      description: 'Focused on software development, network security, and data structures. Completed honors thesis on "Implementing Zero-Knowledge Proofs for Privacy-Preserving Authentication".'
+      title: 'Post-Graduate Program (Cyber Security)',
+      subtitle: 'Vellore Institute of Technology, Bangalore',
+      dateRange: '2024 - 2025',
+      description: 'Deepend the learning curve towards cloud security, cryptography, and blockchain security with a focus on WEB 3.0 vulnerabilities and decentralized systems.'
+    },
+    {
+      title: 'Bachelor of Technology in CSIT (Cyber Security)',
+      subtitle: 'Symbiosis Skills and Professional University',
+      dateRange: '2020 - 2024',
+      description: 'Focused on secure software development, network security, and data structures.'
     }
   ];
   
@@ -26,12 +33,14 @@ const AboutPage = () => {
             <TerminalText 
               text="$ cat about.md"
               className="text-sm text-cyber-green mb-2"
+              manual
             />
             <h1 className="text-4xl font-bold mb-4">About Me</h1>
             <TerminalText 
               text="Passionate about strengthening the digital world against evolving cyber threats."
               className="text-xl text-white"
-              typeSpeed={30}
+              typeSpeed={20}
+              manual
             />
           </div>
           
@@ -42,7 +51,7 @@ const AboutPage = () => {
                 <div 
                   className="h-64 rounded-md bg-cyber-dark overflow-hidden"
                   style={{
-                    backgroundImage: "url('https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
+                    backgroundImage: `url(${Me})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}
@@ -50,7 +59,7 @@ const AboutPage = () => {
               </div>
               
               <div className="md:col-span-2">
-                <h2 className="text-2xl font-bold mb-4">Who I Am</h2>
+                <h2 className="text-2xl font-bold mb-4">This is me</h2>
                 <p className="text-gray-300 mb-4">
                   I am a cybersecurity professional with a passion for ethical hacking, 
                   vulnerability research, and secure system design. With expertise in penetration testing, 
@@ -64,8 +73,7 @@ const AboutPage = () => {
                 </p>
                 <p className="text-gray-300">
                   When I'm not hunting for vulnerabilities or securing systems, I enjoy participating in 
-                  CTF competitions, contributing to open-source security tools, and mentoring aspiring 
-                  cybersecurity professionals.
+                  CTF competitions, hiking and playing chess.
                 </p>
               </div>
             </div>

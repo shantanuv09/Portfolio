@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Terminal, Shield, Code, Database } from 'lucide-react';
 import TerminalText from '../components/TerminalText';
+import Background from '../images/DonateNow.png' 
 
 const HomePage = () => {
   return (
@@ -10,10 +11,9 @@ const HomePage = () => {
         <div className="container-custom">
           <div className="max-w-3xl">
             <div className="cyber-terminal mb-6 inline-block">
-              <TerminalText 
-                text="$ whoami"
-                className="text-sm text-cyber-green mb-2"
-              />
+              <div>
+                <p>Hi! I am Shantanu Vartak</p>
+              </div>
               <TerminalText 
                 text={[
                   "Cybersecurity Specialist",
@@ -26,10 +26,6 @@ const HomePage = () => {
                 startDelay={500}
               />
             </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Securing the <span className="text-cyber-blue">Digital Frontier</span>
-            </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-2xl">
               I help organizations protect their critical assets from evolving 
@@ -106,7 +102,7 @@ const HomePage = () => {
               <div 
                 className="h-72 bg-cyber-dark rounded border border-cyber-gray overflow-hidden"
                 style={{
-                  backgroundImage: "url('https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
+                  backgroundImage: `url(${Background})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -114,12 +110,10 @@ const HomePage = () => {
             </div>
             
             <div className="cyber-card flex flex-col justify-center h-full">
-              <h3 className="text-2xl font-bold mb-2">Blockchain Security Audit Platform</h3>
-              <p className="text-cyber-blue font-mono text-sm mb-4">Smart Contract Vulnerability Scanner</p>
+              <h3 className="text-2xl font-bold mb-2">Donate Now</h3>
+              <p className="text-cyber-blue font-mono text-sm mb-4">Blockchain-based Crypto Donation System</p>
               <p className="text-gray-300 mb-6">
-                Developed an automated security auditing platform for blockchain smart contracts
-                that identifies vulnerabilities, security flaws, and optimization opportunities
-                in Solidity code before deployment.
+                Developed a web-app to cater the needs of a future-proof charity system which enables users to donate Ethereum (ETH) to the needy and verified campaigns setup by verified organizations in an interactive but secure fashion.
               </p>
               
               <div className="flex flex-wrap gap-2 mb-6">
@@ -133,7 +127,7 @@ const HomePage = () => {
                   Ethereum
                 </span>
                 <span className="inline-block text-xs font-mono py-1 px-2 bg-cyber-dark border border-cyber-gray text-cyber-blue">
-                  Static Analysis
+                  Web3Sec
                 </span>
               </div>
               

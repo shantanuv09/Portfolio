@@ -1,50 +1,24 @@
 import { Award, FileCheck } from 'lucide-react';
 import TerminalText from '../components/TerminalText';
 import CertificationBadge from '../components/CertificationBadge';
+import cert1 from '../images/cert1.png'
+import cert2 from '../images/cert2.png'
 
 const CertificationsPage = () => {
   const certifications = [
     {
-      title: "Offensive Security Certified Professional (OSCP)",
-      issuer: "Offensive Security",
-      date: "March 2023",
-      image: "https://images.pexels.com/photos/5380651/pexels-photo-5380651.jpeg",
-      verifyLink: "#"
+      title: "Network Ethical Hacking",
+      issuer: "Udemy",
+      date: "Nov'20",
+      image: cert1,
+      verifyLink: "https://www.udemy.com/certificate/UC-f0b1cb86-cc3b-48a0-a91c-9be5eef52ac2/"
     },
     {
-      title: "Certified Information Systems Security Professional (CISSP)",
-      issuer: "ISC²",
-      date: "October 2022",
-      image: "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg",
-      verifyLink: "#"
-    },
-    {
-      title: "Certified Ethical Hacker (CEH)",
-      issuer: "EC-Council",
-      date: "June 2021",
-      image: "https://images.pexels.com/photos/6476590/pexels-photo-6476590.jpeg",
-      verifyLink: "#"
-    },
-    {
-      title: "CompTIA Security+",
-      issuer: "CompTIA",
-      date: "January 2021",
-      image: "https://images.pexels.com/photos/6476254/pexels-photo-6476254.jpeg",
-      verifyLink: "#"
-    },
-    {
-      title: "Certified Blockchain Security Professional (CBSP)",
-      issuer: "Blockchain Council",
-      date: "August 2023",
-      image: "https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg",
-      verifyLink: "#"
-    },
-    {
-      title: "AWS Certified Security - Specialty",
-      issuer: "Amazon Web Services",
-      date: "May 2022",
-      image: "https://images.pexels.com/photos/7688370/pexels-photo-7688370.jpeg",
-      verifyLink: "#"
+      title: "Ethical Hacking from Scratch",
+      issuer: "Udemy",
+      date: "Jul'21",
+      image: cert2,
+      verifyLink: "https://www.udemy.com/certificate/UC-e32f0873-5052-4aef-a3b5-f1efe105c670/"
     }
   ];
   
@@ -56,12 +30,14 @@ const CertificationsPage = () => {
             <TerminalText 
               text="$ cat ./credentials/certifications.json"
               className="text-sm text-cyber-green mb-2"
+              manual
             />
             <h1 className="text-4xl font-bold mb-4">Certifications & Credentials</h1>
             <TerminalText 
               text="Continuous learning and validated expertise in cybersecurity."
               className="text-xl text-white"
               typeSpeed={30}
+              manual
             />
           </div>
           
@@ -86,7 +62,7 @@ const CertificationsPage = () => {
           </div>
           
           {/* Additional Credentials */}
-          <div className="cyber-card mb-10">
+          {/* <div className="cyber-card mb-10">
             <div className="flex items-center mb-6">
               <FileCheck className="h-6 w-6 text-cyber-green mr-2" />
               <h2 className="text-2xl font-bold">Additional Credentials</h2>
@@ -147,10 +123,10 @@ const CertificationsPage = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
           
           {/* Certification Roadmap */}
-          <div className="cyber-card">
+          {/* <div className="cyber-card">
             <h2 className="text-2xl font-bold mb-6">Certification Roadmap</h2>
             
             <div className="space-y-4">
@@ -175,7 +151,7 @@ const CertificationsPage = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
