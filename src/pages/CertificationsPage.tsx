@@ -3,10 +3,18 @@ import TerminalText from "../components/TerminalText";
 import CertificationBadge from "../components/CertificationBadge";
 import cert1 from "../images/cert1.png";
 import cert2 from "../images/cert2.png";
+import cert3 from "../images/cert3.png";
 
 const CertificationsPage = () => {
   const certifications = [
     {
+      title: "Jr. Penetration Tester",
+      issuer: "TryHackMe",
+      date: "Jul'25",
+      image: cert3,
+      verifyLink:
+        "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-0HKMZICKA6.pdf",
+    },{
       title: "Network Ethical Hacking",
       issuer: "Udemy",
       date: "Nov'20",
@@ -38,7 +46,7 @@ const CertificationsPage = () => {
               Certifications & Credentials
             </h1>
             <TerminalText
-              text="Continuous learning and validated expertise in cybersecurity."
+              text="Learning and validating personal expertise in cybersecurity."
               className="text-xl text-white"
               typeSpeed={30}
               manual
