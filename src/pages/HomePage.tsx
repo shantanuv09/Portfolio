@@ -62,7 +62,44 @@ const HomePage = () => {
             <span className="text-cyber-blue">&gt;_</span> Featured Projects
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="cyber-card text-center ">
+              <h3 className="text-2xl font-bold mb-2">Web-Exploit Toolkit [WET]</h3>
+
+              <p className="text-cyber-blue font-mono text-sm mb-4">
+                Web Vulnerability Scanner
+              </p>
+              <p className="text-gray-300 mb-6">
+                A Python-based tool for automated testing of common web vulnerabilities like XSS, CSRF, SQL Injection, Open Redirect, etc.Supports GET/POST injection, custom payloads, cookie/session authentication.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6 justify-center">
+                <span className="inline-block text-xs font-mono py-1 px-2 bg-cyber-dark border border-cyber-gray text-cyber-blue">
+                  Solidity
+                </span>
+                <span className="inline-block text-xs font-mono py-1 px-2 bg-cyber-dark border border-cyber-gray text-cyber-blue">
+                  React
+                </span>
+                <span className="inline-block text-xs font-mono py-1 px-2 bg-cyber-dark border border-cyber-gray text-cyber-blue">
+                  Smart Contracts
+                </span>
+                <span className="inline-block text-xs font-mono py-1 px-2 bg-cyber-dark border border-cyber-gray text-cyber-blue">
+                  Web3Sec
+                </span>
+                <div className="flex space-x-4">
+                  <a
+                    href="https://github.com/shantanuv09/Web-Exploit-Toolkit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-xs font-mono text-white hover:text-cyber-blue transition-colors duration-300"
+                  >
+                    <Github className="h-3 w-3 mr-1" />
+                    Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div className="cyber-card text-center ">
               <h3 className="text-2xl font-bold mb-2">Donate Now</h3>
 
@@ -105,7 +142,7 @@ const HomePage = () => {
 
             <div className="cyber-card text-center ">
               <h3 className="text-2xl font-bold mb-2">
-                DeCap (Decentralized Capital)
+                DeCap [Decentralized Capital]
               </h3>
               <p className="text-cyber-blue font-mono text-sm mb-4">
                 Blockchain-based Banking System
