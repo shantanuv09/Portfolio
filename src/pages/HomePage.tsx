@@ -28,7 +28,7 @@ const HomePage = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto text-center">
               I help organizations protect their critical assets from evolving
               cyber threats through expert security analysis, penetration
-              testing, and blockchain security solutions.
+              testing, and optimal mitigation strategies.
             </p>
 
             <div className="justify-center flex flex-wrap gap-4">
