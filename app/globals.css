@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-midnight-void: #020617;
+  --color-electric-cobalt: #3b82f6;
+  --color-electric-cobalt-alpha: color-mix(in srgb, var(--color-electric-cobalt), transparent 80%);
+  --color-phosphate-green: #22c55e;
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+:root {
+  --background: var(--color-midnight-void);
+  --foreground: #f8fafc;
+  /* slate-50 */
+
+  /* For glassmorphism effects */
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(2, 6, 23, 0.7);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Utilities */
+@utility glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+@utility cyber-border {
+  border: 1px solid var(--color-midnight-void);
+  box-shadow: 0 0 0 1px #334155;
+  /* slate-700 */
+}
+
+/* Custom Utilities */
+.clip-path-polygon {
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Cyber Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(34, 197, 94, 0.3);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 197, 94, 0.5);
+}
