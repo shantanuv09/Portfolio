@@ -85,7 +85,7 @@ export default function Home() {
 
         {/* Navigation Bar */}
         <header className="fixed top-0 w-full p-6 flex justify-between items-center z-50">
-          <CyberBreadcrumbs deepMode={deepAccessGranted} />
+
         </header>
 
         {/* Hero Section */}
