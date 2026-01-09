@@ -13,8 +13,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CyberSec Portfolio | Elite Engineering",
-  description: "Advanced Cybersecurity Portfolio featuring Cyber-Brutalism design.",
+  title: "Shantanu's Portfolio | CyberSec",
 };
 
 export default function RootLayout({
